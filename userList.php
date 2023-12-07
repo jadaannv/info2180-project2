@@ -20,17 +20,16 @@
     <h1>Users</h1>
     <button id = "addUser"> + Add User</button>
     </div>
-
-    <div>
+    <div class = userTable>
       <!-- Table to display data from database -->
-    <table class = user-list-table>
+      <table class = user-list-table>
       <tr id=row-headings>
         <th> Name </th>
         <th> Email </th>
         <th> Role </th>
         <th> Created </th>
       </tr>  
-    </div>
+   </div>
  </main>
 
 </div>
