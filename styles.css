@@ -23,8 +23,9 @@ aside{
 
 main{
     grid-column: 2;
-    background-color: #CCCCCC;
+    background-color: #EFEFEF;
 }
+
 footer{
     text-align: center;
 }
