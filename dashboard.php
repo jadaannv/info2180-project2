@@ -6,6 +6,7 @@
   <title>Users Dashboard</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="dashboard.css">
+  <script src="dashboard.js" type="text/javascript"></script>
 </head>
 <body>
     <header>
@@ -59,6 +60,7 @@ $pstmt->execute();
 
 $users = $pstmt->fetchAll();
 
+
 ?>
 <table class = user-list-table>
   <?php if($users) ?>
@@ -87,17 +89,3 @@ $users = $pstmt->fetchAll();
 </table>
 
 
-
-<!--
-
-<table class = "dTable">
-      <tr id= "row-headings">
-        <th> Name </th>
-        <th> Email </th>
-        <th> Company </th>  
-        <th> Type </th>
-        <th>  </th>
-      </tr> 
-</table> 
-
--->
