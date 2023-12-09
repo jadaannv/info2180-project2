@@ -16,6 +16,11 @@
     border-radius: 4px;
 }
 
+#all, #sales, #support, #assign{
+    border: none;
+    background-color: white;
+}
+
 .d-bg{
     background-color: white;
     width: 95%;

@@ -18,13 +18,14 @@
 
 .userTable{
     margin-top: 15px;
-    background-color: white;
     text-align: center;
-    align-content: center;
+    
 }
 
 .user-list-table{
-    width:100%;
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .users, .userTable{
@@ -45,5 +46,3 @@ th, td {
 #row-headings{
     background-color:#EFEFEF ;
 }
-
-
