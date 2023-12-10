@@ -6,69 +6,33 @@
  <title>List of Users</title>
  <link rel="stylesheet" href="styles.css">
  <link rel="stylesheet" href="list-of-users.css">
+ <script src="getUsers.js" type="text/javascript"></script>
 </head>
 <body>
     <header>
     <?php include 'header.php';?>
-     </header>
- <div class="container">
+    </header>
 
- <aside>
-  <?php include 'aside.php'; ?>
- </aside>
+    <div class="container">
+      <?php include 'aside.php'; ?>
 
- <main>
-    <div class = "users">
-    <h1>Users</h1>
-    <button id = "addUser"> + Add User</button>
+      <main>
+        <div class = "users">
+            <h1>Users</h1>
+            <button id = "addUser"> + Add User</button>
+        </div>
+
+        <div class = tContainer>
+            <div class = userTable>
+             <!-- Table to display data from database -->
+            <?php require_once('getUsers.php')?> 
+        </div>
+
+      </main>
+
     </div>
-    <div class = userTable>
-      <!-- Table to display data from database -->
-    </div>
- </main>
-
-</div>
-
-
-
-<?php
-$host = 'localhost';
-$dbname = 'dolphin_crm';
-$username = 'root';
-$password = 'password123';
-
-$pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password );
-
-$pstmt = $pdo->prepare("SELECT * FROM users");
-
-//$pstmt->bindParam( $country, PDO::PARAM_STR);
-
-$pstmt->execute();
-
-$users = $pstmt->fetchAll();
-
-?>
-<table class = user-list-table>
-  <?php if($users) ?>
-      <tr id = 'row-headings'>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Role</th>
-        <th>Created</th>
-      </tr>
-
-      <?php foreach ($users as $row): ?>
-
-        <tr>
-          <td><?php echo $row['firstname']." ".$row['lastname']; ?></td>
-          <td><?php echo $row['email']; ?></td>
-          <td><?php echo $row['role']; ?></td>
-          <td><?php echo $row['created_at']; ?></td>
-        </tr>
-
-      <?php endforeach; ?>
-
-</table>
 
 </body>
 </html>
+
+
