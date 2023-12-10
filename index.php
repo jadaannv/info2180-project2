@@ -1,5 +1,6 @@
 <?php
 require_once 'session.php';
+require_once 'insert_user.php';
 require_once 'login-view.php';
 
 ?>

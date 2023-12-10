@@ -24,13 +24,6 @@ CREATE TABLE `Users` (
 -- Dumping data for table `Users`
 --
 
-INSERT INTO `Users` (`firstname`, `lastname`, `password`, `email`, `role`, `created_at`)
-VALUES ('', '', PASSWORD('password123'), 'admin@project2.com', '', NOW()),
-('Boris', 'Morris', PASSWORD('boris123'), 'borismorris@gmail.com', 'Admin', NOW()),
-('Jada', 'Ann', PASSWORD('jada123'), 'jadaann@gmail.com', 'Admin', NOW()),
-('James', 'Bond', PASSWORD('james123'), 'jamesbond@gmail.com', 'Member', NOW()),
-('Peter', 'Parker', PASSWORD('peter123'), 'peterparker@gmail.com', 'Member', NOW());
-
 
 
 
