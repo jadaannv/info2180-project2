@@ -3,8 +3,16 @@ function starter() {
     let salesBtn = document.getElementById('sales');
     let supportBtn = document.getElementById('support');
     let assignBtn = document.getElementById('assign');
+    let contactBtn = document.getElementById('addContact');
 
-    //add event listeners to all buttons which calls a displayInfo function
+    //add functionality to the add contact button
+    contactBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        //change name to the actual name of the file
+        window.location.href= "newContact.php";
+    })
+
+    //add event listeners to all filter buttons which calls a displayInfo function
 
     allBtn.addEventListener("click", function(e) {
         e.preventDefault();

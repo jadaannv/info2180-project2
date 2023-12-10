@@ -20,7 +20,7 @@
       <main>
           <div class = "users">
             <h1>Dashboard</h1>
-            <button id = "addUser"> + Add Contact</button>
+            <button id = "addContact"> + Add Contact</button>
           </div>
 
           <div class = "d-container">

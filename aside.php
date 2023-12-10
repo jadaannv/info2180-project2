@@ -2,7 +2,7 @@
   <nav>
       <ul>
         <li>
-          <a href="index.php">
+          <a href="dashboard.php">
             <img src="home-icon.png" alt="Home Icon" width="20" height="20">
             Home
           </a>
