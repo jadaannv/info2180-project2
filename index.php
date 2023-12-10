@@ -29,7 +29,7 @@ require_once 'login-view.php';
     <div class="login-container">
         <form action="login.php" method="post">
             <div class="form-group">
-                <input type="text" id="Email" name="Email" placeholder="Email address" >
+                <input type="text" id="Email" name="Email" placeholder="Email address" required>
             </div>
             <div class="form-group">
                 <input type="password" id="Password" name="Password" placeholder="Password" required>

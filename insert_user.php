@@ -4,7 +4,7 @@ require_once 'connection.php';
 
 // Example data to insert
 $usersData = [
-    ['', '', 'password123', 'admin@project2.com', '', date('Y-m-d H:i:s')],
+    ['', '', 'password123', 'admin@project2.com', 'Admin', date('Y-m-d H:i:s')],
     ['Boris', 'Morris', 'boris123', 'borismorris@gmail.com', 'Admin', date('Y-m-d H:i:s')],
     ['Jada-Ann', 'Vite', 'jada123', 'jadaann@gmail.com', 'Admin', date('Y-m-d H:i:s')],
     ['James', 'Bond', 'james123', 'jamesbond@gmail.com', 'Member', date('Y-m-d H:i:s')],
