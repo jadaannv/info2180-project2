@@ -67,7 +67,7 @@ $contacts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
           <td><?php echo $row['company']; ?></td>
           <td><?php echo $row['type']; ?></td>
           <!-- add the view contact file -->
-          <td><a href = 'contact.php'>View</a>
+          <td><a href = 'viewFullContact.php'>View</a>
         </tr>
 
       <?php endforeach; ?>
