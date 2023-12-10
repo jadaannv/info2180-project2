@@ -19,12 +19,14 @@ header{
 
 aside{
     grid-column: 1;
+    align-self: start;
 }
 
 main{
     grid-column: 2;
-    background-color: blanchedalmond;
+    background-color: #EFEFEF;
 }
+
 footer{
     text-align: center;
 }
