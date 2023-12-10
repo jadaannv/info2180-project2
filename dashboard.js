@@ -9,7 +9,7 @@ function starter() {
     contactBtn.addEventListener("click", function(e){
         e.preventDefault();
         //change name to the actual name of the file
-        window.location.href= "newContact.php";
+        window.location.href= "newcontactForm.php";
     })
 
     //add event listeners to all filter buttons which calls a displayInfo function
