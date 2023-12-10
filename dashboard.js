@@ -18,7 +18,7 @@ function starter() {
 
     supportBtn.addEventListener("click", function(e) {
         e.preventDefault();
-        displayInfo('Support');
+        displayInfo('support');
     });
 
     assignBtn.addEventListener("click", function(e) {

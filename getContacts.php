@@ -27,7 +27,7 @@ elseif ($filter == 'sales') {
 
 //Support Query
 elseif ($filter == 'support') {
-    $sql = "SELECT * FROM `contacts` WHERE type=\'support\';";
+    $sql = "SELECT * FROM `contacts` WHERE type=\"support\";";
     $pstmt = $pdo->prepare($sql);
 
 } 
