@@ -1,3 +1,9 @@
+<?php
+require_once 'session.php';
+require_once 'login-view.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,10 +11,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <header>
-        <?php include 'header.php'; ?>
+        <img src = "dolphin.png" alt="Image of dolphin" 
+        width = "50" height ="50" />
+        <h1>Dolphin CRM</h1> 
     </header>   
     <div class="container"> 
         <div class = "Gap"></div>
@@ -17,12 +26,12 @@
         </div>
             
     <div class="login-container">
-        <form action="#" method="post">
+        <form action="login.php" method="post">
             <div class="form-group">
-                <input type="text" id="email" name="email" placeholder="Email address" required>
+                <input type="text" id="Email" name="Email" placeholder="Email address" >
             </div>
             <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Password" required>
+                <input type="password" id="Password" name="Password" placeholder="Password" required>
             </div>
             <div class="form-group">
                 <button type="submit">
@@ -31,7 +40,12 @@
                     Login</button>
             </div>
         </form>
+        
     </div>
+    <?php
+        check_login_errors();
+
+        ?>
     </div>
     <footer>
         <p>Copyright &copy; 2022 Dolphin CRM </p>

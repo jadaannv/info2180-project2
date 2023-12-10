@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var addUserButton = document.getElementById('addcontact');
+    var addUserButton = document.getElementById('adduser');
 
     addUserButton.addEventListener('click', function () {
         window.location.href = 'newUser.php';
@@ -32,5 +32,5 @@ function handleResponse(response) {
 
 // Make an AJAX request when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    makeRequest('dashboardhandler.php', 'GET', handleResponse);
+    makeRequest('userhandler.php', 'GET', handleResponse);
 });
