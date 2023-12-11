@@ -1,11 +1,8 @@
 <?php
-require_once 'connection.php';
+require_once "connection.php";
+
 $sql = "SELECT Users.firstname, Users.lastname, Users.email, Contacts.company, Contacts.type, Contacts.title FROM Users JOIN Contacts ON Users.email = Contacts.email;";
 $pstmt = $pdo->query($sql);
-
-require_once 'session.php';
-
-$id = $_SESSION["user_id"];
 
 // Get the filter parameter from the GET request
 $filter = isset($_GET['filter']) ? $_GET['filter'] : 'all';
@@ -32,7 +29,7 @@ elseif ($filter == 'support') {
 } 
 elseif ($filter == 'assigned_to') {
     // Replace 1 with current user ID
-    $sql = "SELECT* FROM contacts WHERE assigned_to=$id;";
+    $sql = "SELECT* FROM contacts WHERE assigned_to=1;";
     $pstmt = $pdo->prepare($sql);
 } 
 else{
@@ -49,6 +46,7 @@ $contacts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
 <table class = user-list-table>
   <?php if($contacts) ?>
       <tr id = 'row-headings'>
+        <th>Title</th>
         <th>Name</th>
         <th>Email</th>
         <th>Company</th>
@@ -59,12 +57,13 @@ $contacts = $pstmt->fetchAll(PDO::FETCH_ASSOC);
       <?php foreach ($contacts as $row): ?>
 
         <tr>
-          <td><?php echo $row['title']." ".$row['firstname']." ".$row['lastname']; ?></td>
+        <td><?php echo $row['title']; ?></td>
+          <td><?php echo $row['firstname']." ".$row['lastname']; ?></td>
           <td><?php echo $row['email']; ?></td>
           <td><?php echo $row['company']; ?></td>
           <td><?php echo $row['type']; ?></td>
           <!-- add the view contact file -->
-          <td><a href = 'viewFullContact.php'>View</a>
+          <td><a href = 'contact.php'>View</a>
         </tr>
 
       <?php endforeach; ?>

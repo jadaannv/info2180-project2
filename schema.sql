@@ -55,7 +55,7 @@ CREATE TABLE `Contacts` (
 
 INSERT INTO `Contacts` (`title`, `firstname`, `lastname`, `email`, `telephone`, `company`, `type`, `assigned_to`,`created_by`,  `created_at`, `updated_at`)
 VALUES ('Mr', 'Boris', 'Morris', 'borismorris@gmail.com', '876-123-4567', 'Amazon', 'Sales Lead', 2, 2, NOW(), NOW()),
-('Ms', 'Jada', 'Ann', 'jadaann@gmail.com', '876-123-4567', 'Apple', 'Sales Lead', 3, 3, NOW(), NOW()),
+('Ms', 'Jada-Ann', 'Vite', 'jadaann@gmail.com', '876-123-4567', 'Apple', 'Sales Lead', 3, 3, NOW(), NOW()),
 ('Mr', 'James', 'Bond', 'jamesbond@gmail.com', '876-123-4567', 'MI6', 'Support', 2, 2, NOW(), NOW()),
 ('Dr', 'Peter', 'Parker', 'peterparker@gmail.com', '876-123-4567', 'Oscorp', 'Support', 3, 3,  NOW(), NOW());
 
